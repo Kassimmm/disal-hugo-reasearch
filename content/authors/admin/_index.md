@@ -1,77 +1,47 @@
 ---
-# Display name
-title: Nelson Bighetti
-
-# Full Name (for SEO)
-first_name: Nelson
-last_name: Bighetti
-
-# Is this the primary user of the site?
-superuser: true
-
-# Role/position
-role: Professor of Artificial Intelligence
-
-# Organizations/Affiliations
-organizations:
-  - name: Stanford University
-    url: ''
-
-# Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
-
+title: Dr. Justice Appati
+role: "Research Lead | Senior Lecture "
+avatar_filename: avatar.jpg
+bio: Dr. Justice Kwame Appati is a Research Lead at DISAL Laboratory and a
+  Senior Lecturer at the University of Ghana. With a passion for innovation and
+  academia, Dr. Justice Kwame Appati contributes to groundbreaking research and
+  education.
 interests:
   - Artificial Intelligence
   - Computational Linguistics
   - Information Retrieval
-
-education:
-  courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
-
-# Social/Academic Networking
-# For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:test@example.org'
-  - icon: twitter
+    link: mailto:jkappati@ug.edu.gh
+  - display:
+      header: false
+    link: linkedin.com/in/dr-justice-kwame-appati-7a2738156
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-  - icon: github
+    label: LinkedIn
+    icon: linkedin
+  - display:
+      header: false
+    link: https://x.com/appatechGH
     icon_pack: fab
-    link: https://github.com/gcushen
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
-
-# Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ''
-
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
+    icon: twitter
+    label: Twitter
+organizations:
+  - name: University of Ghana
+    url: https://www.ug.edu.gh/
+education:
+  courses:
+    - course: PhD in Artificial Intelligence
+      institution: University Of Ghana
+      year: 2012
+superuser: true
 user_groups:
   - Researchers
+last_name: Bighetti
+highlight_name: false
+first_name: Nelson
+email: ""
 ---
+With a strong foundation in applied mathematics, image processing, machine learning, and computer vision, Dr. Justice Kwame Appati specializes in developing innovative solutions that address complex real-world problems. Their research interests span a range of interdisciplinary applications, contributing to the advancement of technology and its practical uses in society.
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+As an accomplished academic and researcher, Dr. Justice Kwame Appati combines deep technical expertise with a passion for mentorship and teaching. They are committed to inspiring and guiding students to excel in their academic and professional pursuits, fostering a culture of curiosity, innovation, and excellence. Through their work at the University of Ghana and DISAL Laboratory, Dr. Justice Kwame Appati has made significant contributions to both theoretical and applied domains, positioning them as a leader in their field and a driving force behind transformative research and education.

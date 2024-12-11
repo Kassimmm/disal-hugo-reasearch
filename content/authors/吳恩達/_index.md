@@ -1,34 +1,33 @@
 ---
-# Display name
-title: Alice Wu 吳恩達
-
-# Full name (for SEO)
-first_name: Alice
-last_name: Wu
-
-# Username (this should match the folder name)
-authors:
-  - 吳恩達
-
-# Is this the primary user of the site?
-superuser: false
-
-# Role/position
-role: Professor of Artificial Intelligence
-
-# Organizations/Affiliations
+title: Daniel Amissah
+role: PHD Student | Research Assistant
+avatar_filename: avatar.jpeg
 organizations:
   - name: Stanford University
-    url: ''
-
-# Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
-
+    url: ""
+superuser: false
+authors:
+  - 吳恩達
+bio: Daniel (Kwame) Amissah is an experienced IT Support Specialist with over 3
+  years of expertise in hardware/software troubleshooting, Office 365, and Linux
+  server management. A skilled WordPress developer and Google-certified
+  professional, he also conducts research in machine learning. Daniel combines
+  technical proficiency with a passion for innovation and problem-solving.
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
-
+  - Top skills Top skills Machine Learning • Image Processing • IT Operations •
+    IT Support • Research
+social:
+  - icon: envelope
+    icon_pack: fas
+    link: mailto:test@example.org
+  - icon: twitter
+    icon_pack: fab
+    link: https://x.com/mister_amissah
+    label: Twitter
+  - icon: linkedin
+    icon_pack: fab
+    link: linkedin.com/in/danielamissah
+    label: LinkedIn
 education:
   courses:
     - course: PhD in Artificial Intelligence
@@ -40,40 +39,13 @@ education:
     - course: BSc in Artificial Intelligence
       institution: Massachusetts Institute of Technology
       year: 2008
-
-# Social/Academic Networking
-# For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:test@example.org'
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/gcushen
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
-
-# Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ''
-
-# Organizational groups that you belong to (for People widget)
-#   Set this to `[]` or comment out if you are not using People widget.
+email: ""
 user_groups:
   - Researchers
   - Visitors
+last_name: Amissah
+first_name: Daniel
 ---
 
-吳恩達 is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+As a seasoned IT Support Specialist with over 5 years of hands-on experience, I excel in providing comprehensive technical support across hardware, software, and network environments. My expertise spans Office 365 administration, Linux server management, and advanced troubleshooting, ensuring seamless operations and optimal system performance. With over 3 years of experience in WordPress development, I blend technical proficiency with web design skills to create and manage dynamic, user-friendly websites.
+In addition to my IT expertise, I am deeply interested in machine learning research, particularly at the intersection of healthcare, biometrics, and agriculture. I am skilled in machine learning and deep learning, and I aim to leverage these technologies to drive innovation and improve outcomes in these critical fields. Google Certified, I am committed to continuous learning and applying cutting-edge solutions to meet organizational needs. I aim to integrate my diverse skill set and research interests to contribute to advancements in IT support and machine learning applications.
