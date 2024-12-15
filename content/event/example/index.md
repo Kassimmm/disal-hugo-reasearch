@@ -1,63 +1,44 @@
 ---
-title: Example Event
-
-event: Wowchemy Conference
-event_url: https://example.org
-
-location: Wowchemy HQ
+abstract: Celebrate the achievements of the Class of 2024 at the University of
+  Ghana's Computer Science Graduation Ceremony. Join us in honoring the hard
+  work, dedication, and accomplishments of our graduating students as they
+  prepare to embark on their professional journeys in the world of technology
+  and innovation.
+slides: null
+url_pdf: ""
+summary: Celebrate the accomplishments of the Class of 2024 at the University of Ghana’s Computer Science Graduation Ceremony. 
+title: University of Ghana Computer Science Graduation 2024
+location: University of Ghana, Great Hall
+date: 2024-02-10T08:00:00.000Z
+date_end: 2024-02-10T17:00:00.000Z
+all_day: true
+event: Department of Computer Science, University of Ghana
+event_url: https://sts.ug.edu.gh/services/graduation/search
+featured: false
+authors: []
+url_video: ""
+url_slides: ""
 address:
   street: 450 Serra Mall
   city: Stanford
   region: CA
-  postcode: '94305'
+  postcode: "94305"
   country: United States
-
-summary: An example event.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
-
-# Talk start and end times.
-#   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
-all_day: false
-
-# Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
-
-authors: []
+publishDate: 2017-01-01T00:00:00.000Z
 tags: []
-
-# Is this a featured talk? (true/false)
-featured: false
-
+projects: null
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+  caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)"
   focal_point: Right
-
-url_code: ''
-url_pdf: ''
-url_slides: ''
-url_video: ''
-
-# Markdown Slides (optional).
-#   Associate this talk with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides:
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects:
+  filename: featured.jpeg
+url_code: ""
 ---
 
-Slides can be added in a few ways:
 
-- **Create** slides using Wowchemy's [_Slides_](https://docs.hugoblox.com/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/writing-markdown-latex/).
 
-Further event details, including page elements such as image galleries, can be added to the body of this page.
+The 2024 Computer Science Graduation Ceremony will feature inspiring speeches from faculty members, alumni, and student representatives. Highlights will include the presentation of awards for outstanding academic and research contributions, as well as a keynote address by an esteemed guest from the tech industry. Family, friends, and the university community are warmly invited to join in this momentous occasion.
+
+Date: July 20, 2024
+Time: 9:00 AM – 12:00 PM
+
+Reception to follow in the Faculty Courtyard.

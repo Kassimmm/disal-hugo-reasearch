@@ -1,6 +1,6 @@
 ---
 title: 🌟 New Publication Announcement from Our Research Lab! 🌟
-date: 2024-11-26
+date: 2024-11-05T14:00:00.000Z
 image:
   filename: featured.jpg
 ---

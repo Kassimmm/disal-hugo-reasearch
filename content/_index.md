@@ -15,7 +15,7 @@ sections:
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        The **Disal Research Group** is a center of excellence in Machine Learning research. Our work spans applications in public health, agriculture, biometrics, human emotions, and image processing.
   
   - block: collection
     content:
