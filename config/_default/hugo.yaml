@@ -3,9 +3,9 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: DISAL Research Groupx # Website name
+title: DISAL Research Group # Website name
 params:
-  logo: "favicon.ico"  # Path to your logo image
+  logo: "icon.png"  # Path to your logo image
 baseURL: 'https://example.com/' # Website URL
 
 ############################

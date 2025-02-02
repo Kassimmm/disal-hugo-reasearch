@@ -15,7 +15,7 @@ sections:
       text: |
         <br>
         
-        The **Disal Research Group** is a center of excellence in Machine Learning research. Our work spans applications in public health, agriculture, biometrics, human emotions, and image processing.
+        This Research Lab is a center of excellence in Machine Learning research. Our work spans applications in public health, agriculture, biometrics, human emotions, and image processing.
   
   - block: collection
     content:

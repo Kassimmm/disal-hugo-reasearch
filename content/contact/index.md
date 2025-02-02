@@ -27,11 +27,11 @@ sections:
         - 'Monday 10:00 to 13:00'
         - 'Wednesday 09:00 to 10:00'
       appointment_url: 'https://calendly.com'
-      contact_links:
-       - icon: comments
-         icon_pack: fas
-         name: Discuss on Forum
-         link: 'https://calendly.com'
+      # contact_links:
+      #  - icon: comments
+      #    icon_pack: fas
+      #    name: Discuss on Forum
+      #    link: 'https://calendly.com'
     
       # Automatically link email and phone or display as text?
       autolink: true
@@ -59,15 +59,14 @@ sections:
       background:
         image: 
           filename: contact.jpg
-          style: "width: 80%; margin: 20px 20px;"
           filters:
-            brightness: 1
+            brightness: 1   
           parallax: false
           position: center
           size: cover
           text_color_light: true
       
-      spacing:
-        margin: ['20px', '20px', '20px', '20px']
-      css_class: fullscreen
+      # spacing:
+      #   margin: ['100px', '100px', '100px', '100px']
+      css_class: custom-margins
 ---
