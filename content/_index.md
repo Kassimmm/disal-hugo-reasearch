@@ -36,43 +36,31 @@ sections:
       view: card
       columns: '1'
   
-  - block: markdown
-    content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: coders.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
-      spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+
 
   - block: collection
     content:
-      title: Latest Preprints
-      text: ""
+      title: Latest Journal Articles
+      text: "Explore our journal articles, showcasing cutting-edge research from our lab."
       count: 5
       filters:
         folders:
           - publication
-        publication_type: 'article'
+        publication_type: 'article-journal'
     design:
       view: citation
       columns: '1'
 
   - block: markdown
     content:
-      title:
-      subtitle:
+      title: "Advancing AI for a Better Future"
+      subtitle: |
+        The Disal Research Group is dedicated to pioneering advancements in Machine Learning with real-world impact.  
+        
+        Our research spans public health, precision agriculture, biometric security, affective computing, and image processing, leveraging AI to solve complex challenges.  
+        
+        Through innovative methodologies and interdisciplinary collaboration, we develop intelligent systems that enhance human well-being, optimize resources, and push the boundaries of AI-driven solutions.
+
       text: |
         {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
     design:

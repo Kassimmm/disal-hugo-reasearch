@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: DISAL Research Group # Website name
+title: DISAL Research Groups # Website name
 baseURL: 'https://example.com/' # Website URL
 
 ############################
@@ -61,3 +61,6 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+
+params:
+  logo: "assets/media/favicon.ico"  # Path to your logo image

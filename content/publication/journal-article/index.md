@@ -1,36 +1,29 @@
 ---
-abstract: Heart Diseases have the highest mortality worldwide, necessitating
-  precise predictive models for early risk assessment. Much existing research
-  has focused on improving model accuracy with single datasets, often neglecting
-  the need for comprehensive evaluation metrics and utilization of different
-  datasets in the same domain (heart disease). This research introduces a heart
-  disease risk prediction approach by harnessing the whale optimization
-  algorithm (WOA) for feature selection and implementing a comprehensive
-  evaluation framework. The study leverages five distinct datasets, including
-  the combined dataset comprising the Cleveland, Long Beach VA, Switzerland, and
-  Hungarian heart disease datasets. The others are the Z-AlizadehSani,
-  Framingham, South African, and Cleveland heart datasets. The WOA-guided
-  feature selection identifies optimal features, subsequently integrated into
-  ten classification models. Comprehensive model evaluation reveals significant
-  improvements across critical performance metrics, including accuracy,
-  precision, recall, F1 score, and the area under the receiver operating
-  characteristic curve. These enhancements consistently outperform
-  state-of-the-art methods using the same dataset, validating the effectiveness
-  of our methodology. The comprehensive evaluation framework provides a robust
-  assessment of the model’s adaptability, underscoring the WOA’s effectiveness
-  in identifying optimal features in multiple datasets in the same domain
-slides: example
-url_pdf: http://arxiv.org/pdf/1512.04133v1
+abstract: This study introduces an advanced framework for plant disease
+  detection, specifically classifying tomato images into “Early Blight” and
+  “Healthy” categories. Utilizing a fusion of artificial intelligence and
+  computer vision, the research employs the MobileNet architecture enriched with
+  custom convolutional layers for enhanced feature extraction. The model's
+  adaptability to different dataset sizes highlights its robustness, with
+  performance benchmarks indicating up to 100% accuracy using classifiers like
+  Random Forest, SVM, and Gradient Boosting. The framework further leverages
+  ensemble classifiers to refine prediction accuracy, addressing the real-world
+  complexities of variable lighting and environmental conditions. In its
+  entirety, the research offers a scalable, accurate, and systematic approach to
+  automated plant disease detection, with implications for bolstering global
+  food security and sustainable agriculture.
+slides: Early Blight Detection in Tomatoes
+url_pdf: https://link.springer.com/chapter/10.1007/978-981-97-2053-8_10
 publication_types:
   - article-journal
 authors:
   - admin
-  - Stephen Atimbire
-  - Prof Ebenezer Owusu
+  - 吳恩達
+  - Ziem Wellu
 author_notes:
   - Equal contribution
   - Equal contribution
-publication: Heart Disease Prediction
+publication: Early Blight Detection in Tomatoes
 summary: Empirical exploration of whale optimisation algorithm for heart disease
   prediction
 url_dataset: ""
@@ -38,294 +31,32 @@ url_project: ""
 publication_short: ""
 url_source: ""
 url_video: ""
-title: Empirical exploration of whale optimisation algorithm for heart disease
-  prediction
-doi: https://doi.org/10.1038/s41598-024-54990-1
+title: Implementation of Custom-Based Mobile-Network Model for Early Blight
+  Detection in Tomatoes
+doi: https://doi.org/10.1007/978-981-97-2053-8_10
 featured: false
 tags:
   - Source Themes
 projects: []
 image:
-  caption: Heart Disease Prediction
+  caption: Early Blight Detection in Tomatoes
   focal_point: ""
   preview_only: false
-  alt_text: Heart Disease Prediction
+  alt_text: Early Blight Detection in Tomatoes
   filename: featured.jpg
-date: 2024-12-15T15:25:00.000Z
+date: 2024-12-16T11:06:00.000Z
 url_slides: ""
 publishDate: 2017-01-01T00:00:00.000Z
 url_poster: ""
-url_code: https://github.com/HugoBlox/hugo-blox-builder
+url_code: https://link.springer.com/chapter/10.1007/978-981-97-2053-8_10
 ---
 {{% callout note %}}
 
-Empirical exploration of whale optimisation algorithm for heart disease prediction  
+Implementation of Custom-Based Mobile-Network Model for Early Blight Detection in Tomatoes
 
 Scientific Reports | (2024) 14:4530  
 
-https://doi.org/10.1038/s41598-024-54990-1  
+https://doi.org/10.1007/978-981-97-2053-8_10
 
 {{% /callout %}}
 
-## Introduction
-
-Heart Disease (HD) is of utmost importance due to the heart’s critical role among other human organs. HD has high death rates worldwide, with approximately 17.9 million people dying from heart conditions in 2019[1](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR1). Heart diseases account for 32% of global deaths, with heart attacks and stroke alone making more than 85% of recorded deaths. Over 75% of cardiovascular deaths in 2019 occurred in underdeveloped nations, accounting for 38% of deaths under 70 years[1](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR1). Since cardiovascular diseases are fatal, their early detection will enable medical professionals to provide timely healthcare to patients to avert death.
-
-Because of a scarcity of ultra-modern examination tools and medical experts, conventional medical methods for diagnosing heart diseases are challenging, complicated, time-consuming, and exorbitant, making the diagnosis of heart diseases difficult and sometimes unavailable, especially in developing countries[2](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR2). Machine and deep learning methods have been recently used to analyze clinical data and make predictions[3](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR3).
-
-Machine learning (ML) provides cost-efficient alternatives where already collected patient data serve as a data mine to perform predictive analysis for diagnostic purposes. To improve the accuracy of ML models, some existing works have focused on using various classifiers or their enhanced forms[4](https://link.springer.com/article/10.1038/s41598-024-54990-1?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240224&utm_content=10.1038%2Fs41598-024-54990-1#ref-CR4),[5](https://link.springer.com/article/10.1038/s41598-024-54990-1?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240224&utm_content=10.1038%2Fs41598-024-54990-1#ref-CR5),[6](https://link.springer.com/article/10.1038/s41598-024-54990-1?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240224&utm_content=10.1038%2Fs41598-024-54990-1#ref-CR6),[7](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR7). Related works confirm that the feature selection reduces data dimensionality and improves model performance significantly[8](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR8). Hence, some studies have utilized various methods to improve performance by varying the feature selection methods[9](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR9),[10](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR10).
-
-However, some works that utilize feature selection are fraught with redundant features that impact metrics recorded. This is affirmed when wrapper methods are used over filter methods and when embedded methods are used over filter and wrapper methods. It also explains why works, including feature selection, may only record better performance on some datasets if the technique is efficient. In addition, though the researchers do not present the reason some existing works have not reported on specific metrics, studies such as Hicks et al.[11](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR11) have posited that in a clinical setting, a subset of metrics may give an erroneous outlook of how a model performs and not enabling holistic model performance evaluation. There is an avenue for more scientific work on feature selection methods capable of improving other metrics besides the accuracy metric. This helps to affirm the reliability of the model performance as the unavailability of multiple evaluation metrics is an indication of an unbalanced model not capable of being thoroughly assessed.
-
-This study proposes the use of the whale optimization algorithm (WOA) as a swarm-inspired feature selection algorithm on five (5) heart datasets on ten (10) models (classical ML, ensemble and deep learning models) for the selection of relevant datasets features. The approach contributes to the body of knowledge in the heart disease domain by providing a comprehensive assessment of five different datasets (in the same domain), ten different models and five evaluation metrics. The proposed methodology also validates the robustness of the WOA algorithm on five datasets of variable sizes in the same domain compared to most works, which do not test their methodologies on multiple datasets in the same domain.
-
-## Related works
-
-### Introduction
-
-Identifying significant features (or redundant features) in a dataset remains a critical activity in modelling[12](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR12). Feature selection helps to determine relevant subsets from the existing features[13](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR13) and is recommended for use where one needs to understand the selected features[14](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR14). Excessive dataset features cause over-fitting, reduce model efficiency, and impair model generalization[15](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR15). Feature selection (FS) improves the modelling process[16](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR16). Selected feature selection techniques in literature are mostly grouped into filter, wrapper, hybrid, embedded, and recently, swarm intelligent methods.
-
-#### Filter-based feature selection methods
-
-Filter-based methods do not consider the dependence of features on one another; only the intrinsic properties are considered[17](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR17). Ghosh et al.[18](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR18) used the Cleveland heart dataset alongside the Decision Tree, K-Nearest Neighbour (KNN), and Random Forest (RF) classifiers, recording the highest accuracy of 93.36% with RF. The most optimal features were selected using relief before being passed to the classifiers for training and testing. Relief selected six of the 13 features, resulting in a significant achievement of accuracy. Narsimhulu et al.[19](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR19) proposed a Filter Based Feature Selection (FBFS) to detect relevant features and remove the redundant ones. RF recorded the highest accuracy of 95.08%, validating the positive influence of the filter feature selection method on model accuracy. Filter methods can compute the scoring function quickly and efficiently[20](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR20). Filter methods do not consider feature interdependence and are not dependent on the classifiers[21](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR21).
-
-#### Wrapper based feature selection methods
-
-To resolve some of the shortcomings of filter-based methods, the wrapper methods use classifiers and consider feature interdependence, increasing computational time[22](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR22). Evaluating different feature subsets requires retraining and testing[23](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR23) compared to the filter feature selection algorithms. El-Sayed employed the Genetic Algorithm (GA) wrapper method on the Cleveland heart disease dataset, obtaining 89.07% and 67.22% for binary and multiclass, respectively. First, GA was used to reduce the attributes from the dataset, and Linear Discriminant Analysis (LDA) was used for classification. MultiLDA and multi-classifiers were then used again after GA for multiclass datasets. In their study, GA used alongside the LDA classifier outperformed KNN, Support Vector Machine (SVM) and Naïve Bayes (NB). Sequential Backward Selection (SBS) is also applied to ascertain more significant features, increasing classifier accuracy while decreasing computational time in the study of Haq et al.[10](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR10). The Cleveland heart disease database was used in the study, recording an accuracy of 90% with six features selected using SBS for feature selection. The KNN classifier with the SBS method outperforms the KNN classifier used single-handedly. The Recursive Feature Elimination (RFE), another wrapper method, is used in the study of[24](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR24). Feature selection is performed using the SVM-RFE before using KNN to find the best features and reduce computing time. KNN without FS had an accuracy of 82.65% and 86.33% with feature selection. The Weighted KNN without FS recorded 83.45% and 90.88% with feature selection. The results confirm that with feature selection, the accuracy of the KNN or the weighted KNN experiences a significant improvement. Although wrapper methods perform better than filter methods, they are computationally expensive[23](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR23).
-
-#### Embedded based feature selection methods
-
-Embedded methods search for classifier-specific optimal features and keep track of feature interdependence with less complexity than the wrapper method[25](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR25),[26](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR26). Embedded methods are less prone to overfitting than wrapper methods and are computationally costlier than the filter method[27](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR27). For the prediction of HD, the LASSO feature selection was compared to the relief feature selection method by Ghosh et al.[28](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR28) by using the the Cleveland, Long Beach VA, Switzerland, Hungarian and Statlog datasets. The study achieved the best accuracy of 99.05% with LASSO and the Random Forest Bagging classifier. In a related study, Zhang et al.[23](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR23) proposed the LinearSVC algorithm, an embedded method with a Deep Neural Network using the Cleveland UCI dataset. The work resulted in an accuracy of 98.56%. The study confirms the advantage of embedded methods of feature selection over the former techniques. The embedded feature approach mitigates the shortcomings of the filter and wrapper methods by engaging with the classifier and accounting for feature dependencies[26](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR26). Its drawback, however, is its slow performance[29](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR29).
-
-#### Hybird based feature selection methods
-
-The hybrid methods use two or more methods together for feature selection tasks. The study of[30](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR30) hybridized Cuckoo Search with the rough set to form the Cuckoo Search with the Rough Set (CSRS) model in their paper. Data from 603 patients are divided into train data for 332 and test data for 271. Cuckoo Search is applied to determine the most optimal features from the training data. Eight features with highly significant values are chosen after 1000 iterations. With optimal features selected, CSRS obtained 93.7% accuracy, outperforming other Cuckoo Search integrated models by 3.37%. Also, a three-phase feature selection approach is proposed by[31](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR31). In their paper, a three-way feature selection method is proposed for reducing the feature set of the arrhythmia dataset. The three cancer datasets achieved 100% accuracy, and 94.50% was achieved on the arrhythmia dataset. The method selects features with the best accuracy not dependent on the filter methods and the classifiers in the first phase, fusing four techniques: Mutual Information (MI), ReliefF (RFF), Chi-Square (CS), and Xvariance (XV) using three classifiers, KNN, SVM, and NB. The original data set is then subjected to the XGBoost | algorithm, with the top features chosen based on accuracy. In the second phase, the top features in the previous stage are correlated using the Pearson Correlation Coefficient (PCC), and strongly correlated features are dropped, ensuring that the feature subsets have maximum relevance. Again, XGBoost is used to obtain the top features, which are then sent to Phase 3. The optimal feature set is finalized in the third phase, using WOA. Arrhythmia, leukaemia and two others form part of the four datasets used in the trials. The features with the most negligible significance in the dataset had the lowest rankings in information, reliance, and distance. It is also observed that the selected features were reduced by 150 and 1286 times for the arrhythmia and leukemia datasets, respectively. The proposed method enhances the removal of noisy data which are discarded and improves accuracy.
-
-Aside from the authors’ report of limited data, one of the tri-stage’s flaws is the costly computation required to obtain accuracy during the first phase and when WOA is applied.
-
-Arroyo and Delima[32](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR32) propose a genetically optimized neural network for HD risk prediction. The Cardiovascular disease dataset with 70,000 records and 12 features was employed for ANN modelling. The authors’ work resulted in higher accuracy. However, determining the correct number of layers and neurons takes time and effort. The study of[33](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR33) also presented techniques based on the KNN, SVM, NB, RF, and a Multilayer Perceptron (MLP) optimized by Particle Swarm Optimization (PSO) merged with Ant Colony Optimization (ACO). The study achieved a maximum of 99.65% accuracy, and the research further enhances the position that with an optimal result set, the accuracy of a study can be significantly improved[34](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR34). Proposed a hybrid feature selection through Information Gain, Correlation, Chi-Squared, and Relief-F. Using the KNN classifier on a heart failure dataset. The approach recorded 84.61% accuracy. The computational and efficiency challenges inherent in a particular algorithm can be incorporated and reflected in the hybrid algorithm, making the hybrid method very complicated to implement. Therefore, individual algorithms’ challenges must be intentionally handled to improve efficiency and accuracy in hybrid methods.
-
-#### Swarm intelligent based feature selection methods
-
-Swarm intelligence optimization methods have emerged as robust methods for feature selection in many fields. “Swarm Intelligence (SI) is a type of artificial intelligence that is based on collective behaviours in decentralized and self-organized systems”[35](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR35). SI is usually inspired by an organized pattern of a random behaviour of a population known as the agents. The intelligent behaviour results in a recognizable pattern helpful in solving optimization problems. Some standard swarm algorithms include the Cuckoo Optimization Algorithm (COA), Ant Colony Optimization (ACO), Bat Algorithm (BA), Grey Wolf Optimization (GWO), Salp Swarm Algorithm (SSA), Marine Predator (MP) and whale optimization algorithm (WOA).
-
-Usman et al.[36](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR36) propose the Cuckoo Search Algorithm (CSA) and another variant, the Cuckoo Optimization Algorithm (COA) for FS on the Eric, Hungarian, Stat log, and Z-Alizadeh datasets. Four classifiers are used in their study, namely Support Vector Machine (SVM), Multi-Layer Perceptron (MLP), Naïve Bayes (NB), and Random Forest (RF) classifiers. CSA outperformed COA by selecting fewer features and higher accuracy across all datasets. Other researchers, Al-Tashi et al.[37](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR37), proposed establishing optimal features to diagnose coronary artery disease using the Grey Wolf Optimization (GWO). The authors first use GWO to determine the significant features. The SVM is then utilized with the optimally selected features as input. The Cleveland UCI dataset was employed, and the model recorded 89.83% accuracy. The other evaluation metrics used are sensitivity, which was recorded at 93%, and 91% for specificity rates. In the study of Al-Tashi et al.[37](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR37), Grey Wolf Optimization (GWO) finds optimal features in the dataset and then evaluates the fitness function of GWO using SVM. The Cleveland UCI dataset used with the study recorded 89.83%, 93% and 91% in accuracy, sensitivity, and specificity, respectively. By combining GWO and the Naïve Bayes (NB) classifier, a new strategy for detecting cardiac disease is developed[38](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR38). The features of the heart disease dataset are discretized to increase the accuracy of the classifiers. GWO then automatically selects Naïve Bayes’s weights to maximize NB’s performance, achieving 87.45% accuracy with good values for Sensitivity, F-measure, and G-mean. The Cleveland UCI data was used in the project. The proposed (GWO-NB) method performed better than the standard Naïve Bayes classifier in accuracy from the experiments. It also confirms the effectiveness of GWO on classifiers. To improve the GWO, the paper of Chakraborty et al.[39](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR39) proposed an enhanced form of GWO for feature selection. Cleveland, Long Beach VA, and Switzerland were utilized in their study. Others include the Hungarian and Statlog datasets. Bagging and boosting techniques produce hybrid classifiers with NB, RF, Decision Tree (DT), K-Nearest Neighbor (KNN), Neural Network, Gradient Boosting, and Adaptive Boosting (AdaBoost). RF achieved the best accuracy of 99.26% with Enhanced-GWO, an improvement of accuracy of 11.90% over the conventional model. The Whale Swarm Algorithm (WSA) proposed by David[40](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR40) was used to select significant features to determine the presence of cardiovascular disease. Using the Statlog dataset, the study recorded an average selection of 6 features after 100 iterations. Using the Logistic Regression (LR), Random Forest, Support Vector Machine and Gaussian Naive Bayes (GNB) classifiers, the study noticed that the Random Forest outperformed the other classifiers, reporting an accuracy of 85.7%. Another commonly used swarm intelligence algorithm within the heart disease domain is Particle Swarm Optimization (PSO). Shahid and Singh[41](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR41) in their paper propose a model known as the emotional neural networks (EmNNs) that PSO has hybridized on the Z-Alizadeh Sani dataset. The researchers apply four distinct feature selection algorithms to optimize the performance of the suggested model. The proposed method selected a total of 22 features. The model outperforms all other models used in the study, recording the highest averages for accuracy, precision, sensitivity, specificity, and F1 score at cross-validation, i.e., 88.34%, 92.37%, 91.85%, 78.98%, and 92.12%, respectively, which are comparable to existing methods in the literature. Their work is improved by introducing a novel multi-objective PSO (MOPSO) proposed by Asadi et al.[42](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR42). Using the Statlog, Cleveland, SPECT, SPECTF, VA Long Beach, and Eric datasets, the study recorded improved accuracy better than when feature selection was not used. Wankhede et al.[43](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR43) propose a Decision Function-based Chaotic Salp Swarm (DFCSS) method to determine the most significant features after data pre-processing. The relevant attributes are then provided to an enhanced Elman neural network classifier. The experiment demonstrates that the proposed method outperformed existing methods with 98.7% and 98.0% accuracy for CVD and UCI datasets, respectively. The Salp Swarm Algorithm selects valuable features from the UCI Cleveland and heart-failure-clinical-records datasets in Sureja et al.[44](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR44). The study recorded 98.75% and 98.46% accuracy for the respective datasets. Swarm-based feature selection approaches thus have the potential to enhance classifier performance drastically.
-
-This research explored the use of WOA for feature selection for the following reasons. First, WOA is easy to implement due to the few internal numbers of parameters[45](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR45), outperforms other swarm algorithms such as the Particle Swarm Optimization (PSO) and gravitational search algorithm (GSA) as recorded in the study of Mirjalili and Lewis[46](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR46) when used for engineering design problems. It has provided outstanding results for optimization problems in domains such as wireless resource allocation and gold price forecasting (outperforming PSO, Grey Wolf Optimization and genetic algorithm[47](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR47),[48](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR48). The study of Ay et al.[49](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR49) also affirms the creditable performance of WOA compared with cuckoo search (CS), flower pollination algorithm (FPA), and Harris Hawks Optimization (HHO) algorithms, other metaheuristic algorithms. Also, WOA is not widely explored in the heart disease domain; hence, its creditable performance in different fields, simplicity, and excellent output against other metaheuristic methods make it a choice worth selecting for FS in the HD domain that guarantees good results.
-
-## Proposed methodology
-
-The methodology for this work and the steps used for feature selection, model training, and model evaluation are discussed. Figure [1](https://link.springer.com/article/10.1038/s41598-024-54990-1#Fig1) depicts the proposed methods employed for this work.
-
-![](metho1.jpg "Methodology for the study.")
-
-### Datasets
-
-The datasets leveraged in this study are summarized in Table [1](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab1). The activities performed on the datasets are discussed in the data pre-processing subsection following.
-
-| \#  | Name of Dataset             | No. of Observations | No. of Features | Publicly Available? |
-| --- | --------------------------- | ------------------- | --------------- | ------------------- |
-| 1   | Combined dataset            | 1025                | 13              | Yes                 |
-| 2   | Z-AlizadehSani dataset      | 303                 | 54              | Yes                 |
-| 3   | Framingham dataset          | 4133                | 15              | Yes                 |
-| 4   | South African heart dataset | 462                 | 9               | Yes                 |
-| 5   | Cleveland UCI heart dataset | 303                 | 13              | Yes                 |
-
-![](f2a1.webp "Combined dataset visualization before feature selection.")
-
-![](a1f3.jpg "Z-AlizadehSani dataset target visualization before feature selection.")
-
-### Data pre-processing
-
-Data pre-processing is an essential activity in most ML pipelines. It includes tasks such as data cleaning, transformation, and organizing data before passing it to a model. This step is essential to improve data quality and make it suitable for building accurate and efficient models.
-
-In this work, the target values indicating the existence of HD are coded as 0 or 1 (absent and present, respectively). Other categorical data fields, such as “famhist” in the SA heart dataset with values “absent” and “present”, are coded as 0 for absent and 1 for present. “Male” and “Female” values for all datasets are encoded as 1 and 0, respectively. All other fields with similar values are coded with numerical values.
-
-#### Data standardization and regularization
-
-The standardization process utilizing the StandardScaler was employed. This involved adjusting the features present in the data to be transformed to possess a zero (0) mean and a one (1) standard deviation. Standardizing the features with StandardScaler has a lower error than MinMaxScaler because StandardScaler scales each feature with zero mean and unit variance, scaling them in an equivalent bell curve and handles missing values preventing overfitting[50](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR50),[51](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR51). A Logistic Regression model with an L2 regularization penalty is fitted with the standardized data. Another parameter, “C”, which controls the trade-off between fitting the data well and the simplicity (parsimonious) of the model, is utilized in the logistic regression model. The Logistic Regression classifier fits the model to the scaled train data and the corresponding target. The model’s coefficients, which indicate each feature’s significance in making predictions, are stored in a variable applied to the training data to obtain a new, regularized training dataset. This regularized training data is utilized for model training. Afterwards, the stored coefficient is applied to the test data to regularize the test data and target. Logistic regression with L2 regularization has proven useful in prior studies to promote sparse solutions[52](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR52),[53](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR53). The regularized train data is passed to the whale optimization algorithm to select the optimal features for model training modelling and testing. The WOA algorithm is discussed in the adjoining pages.
-
-### The whale optimization algorithm (WOA)
-
-WOA is an optimization algorithm that draws inspiration from nature and imitates humpback whales’ hunting techniques developed by Seyedali Mirjalili[46](https://link.springer.com/article/10.1038/s41598-024-54990-1#ref-CR46). The main components of whale optimization are position updating, encircling prey, and searching for prey. The entire WOA steps are discussed in this section and modified to be utilized for feature selection, which is further explained.
-
-#### Feature selection using WOA
-
-The proposed modified WOA determines the best features using the whale optimization algorithm with input from the preprocessed data. The initial location of the whales (indicating feature selection or non-selection) is generated randomly as binary values. The algorithm then updates each whale’s position in each iteration, shrinking the search space with each iteration. The new position is determined by combining the best position found thus far with random numbers. If the new position has better fitness, it becomes the best. The algorithm then returns the indices of the selected features, considered the best feature. The returned indices are passed to the next step to aid the prediction process. Each whale represents a potential solution in the context of feature selection, with a binary vector encoding the presence or lack of features. The algorithm updates each whale’s location based on a linearly decreasing search space coefficient and the best position over a predetermined number of iterations (10, 20, 30, 40, 50 to 100) and agents (10, 20, 30, 40, 50 to 100).
-
-Ten agents are paired against ten iterations for the WOA. This is repeated in additions of 10 (for agents and iterations). By training a Logistic Regression classifier penalized by an L1 regularization on the chosen feature sets, the fitness function is utilized to compute the performance of the provided subset of features. Each iteration updates the whale position. If the new position improves fitness, the position and fitness are updated accordingly. The maximized prediction performance on the validation with a minimized number of features is considered the optimal feature for that iteration. The best position, therefore, reflects the ideal subset of features so far as the algorithm has run through the required number of iterations. The Scaled training data and its target, the number of whales and iterations are the input factors used by WOA for feature selection. The entire process is captured in Algorithm 1.[](https://link.springer.com/article/10.1038/s41598-024-54990-1#Equ2)
-
-### Experiments with WOA feature selection
-
-This subsection discusses the findings from experiments with WOA feature selection.
-
-#### Evaluating completion time for WOA feature selection
-
-In this subsection, the study delves into the completion time when WOA feature selection is employed. We find that the duration varies across different datasets. Factors such as the number of agents, iterations, and features in the data directly influence the completion time; more factors result in a longer duration. Moreover, the observations in each dataset also impact the model completion time. For instance, despite the Z-AlizadehSani and Cleveland UCI datasets containing 303 records, the former requires more time for feature selection. Taking the Framingham dataset as an example, the highest time consumption occurred with this dataset. The completion times for 10, 20, 30, 40, 50, and 100 agents/iterations were 7.56 s, 182.26 s, 383.06 s, 747.03 s, 1072.46 s, and 6656.57 s, respectively. The SA Heart dataset, with times of 0.46 s, 11.80 s, 30.05 s, 58.56 s, 91.20 s, and 547.01 s, had a longer completion time than the Cleveland dataset, even though the Cleveland dataset possesses three additional features. This discrepancy could be due to the marginally more significant number of records in the Cleveland UCI dataset. In summary, the time required for WOA to complete the feature selection process increases with the number of features and records in each dataset. Figure [15](https://link.springer.com/article/10.1038/s41598-024-54990-1#Fig15) presents the findings about feature selection time using Whale Optimization.
-
-![](41598_2024_54990_fig15_html.webp "Feature selection time across datasets")
-
-#### Evaluating metrics using optimal features
-
-The KNN model performs best across all the metrics and for all the datasets. The results significantly improved over the same experiments on all datasets without WOA feature selection. In some instances, KNN with WOA records 100% across metrics (combined dataset), indicating the influence of WOA on a model’s performance. XGB models perform very well across all the metrics on all datasets except the Framingham dataset. Though XGB performs lower on the Framingham dataset than on all the other datasets, the performance across all the valuation metrics is significantly improved over values recorded without WOA feature selection on the Framingham dataset. In essence, the model has improved due to the feature selection just lower than recorded for other datasets when feature selection is employed. The RF classifier also performs well on all the datasets except the Framingham dataset, which performs well on all the metrics apart from the lowest precision (4.78%). The LSTM model records the highest, 99.80%, on all the metrics except the AUC, which recorded 99.81%. The best performance is recorded on the combined dataset for all the models. Similar performance improvement is seen across all the other datasets for the deep learning models. Generally, the ensemble models (RF, XGB and AdaBoost recorded consistent and improved performance across all the datasets on the evaluation metrics than all but KNN for the classical ML models. The deep learning models perform comparatively well, especially on larger datasets. It was also observed that though the SA heart dataset has a relatively small number of features (9 features), WOA selected seven, subsequently improving the model metrics across all the models. This shows that even if there are not many features, WOA can still select the optimal features if they exist. The experiments consistently improve the evaluation metrics when the results from the model with feature selection are compared to those without. The evaluation metrics are captured in Tables [7](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab7), [8](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab8) and [9](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab9).
-
-### Comparative studies
-
-This section performs a comparative study with other related works, comparing the metrics used in the study with values from the metrics of the optimal features used in this work. Works used are the most recent studies in the domain that utilize the same datasets. Table [10](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab10) outlines recent studies with the same five datasets used in this work. We compared the features selected by the respective algorithms and their metrics reported and compared it with results from the optimal features in Tables [6](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab6), [7](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab7) and [8](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab8). The results when WOA is used show significant improvement.
-
-The results show superior metrics recorded when WOA feature selection is used and the impact of WOA on the model performance. It is worth noting that this work measures five evaluation metrics over five different datasets using ten models, providing an exhaustive list of metrics capable of judging the performance reported for every model.
-
-Table [10](https://link.springer.com/article/10.1038/s41598-024-54990-1#Tab10) lists the most recent works in the HD domain, with the last five being the results obtained from this study on the optimal features.
-
-### Limitations of the study
-
-The study has data limitations as image heart disease datasets are out of the scope of this work. The experiments in this study are not performed for more than 100 agents and 100 iterations for the whale optimization algorithm due to computational constraints. Finally, the work is limited to only the heart disease domain.
-
-## Conclusion
-
-The original WOA is designed for continuous optimization. In this work, however, we implement the solution space into a binary form, necessitating the transformation of the output from continuous to binary using a sigmoid transfer function. A thresholding process is then used to convert the values to a binary format. We specify a fitness function which involves training a logistic regression model using the selected features and evaluating its performance through cross-validation. Since the aim is feature selection, the logistic regression model is penalized using an L1 (Lasso) to produce more sparse models, where a subset of coefficients becomes exactly zero, technically performing feature selection. We then introduce a penalty term to discourage the selection of more features. The whale optimization algorithm for feature selection shows improved heart disease risk prediction evaluation metrics. With fewer yet relevant features, models significantly improved across all five metrics. This contributes to the ongoing efforts to enhance the effectiveness of cardiovascular health risk, providing valuable insights for future studies in this field.
-
-Future works can consider using WOA on image datasets for feature extraction. How WOA compares to other swarm intelligence algorithms in the heart disease domain is an area worth researching. Extending the research to more than one dataset in domains other than Cardiovascular health is a useful area for future studies. In addition, future studies can consider more hyperparameter tuning of all the models to improve the results obtained.
-
-## Data availability
-
-Combined dataset <https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset>, 
-
-Z-AlizadehSani dataset <https://www.kaggle.com/datasets/tanyachi99/zalizadeh-sani-dataset-2csv>, Framingham dataset <https://www.kaggle.com/datasets/captainozlem/framingham-chd-preprocessed-data>, South African Heart dataset <https://hastie.su.domains/ElemStatLearn/datasets/SAheart.data>, Cleveland UCI dataset <https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci>.
-
-## References
-
-1. World Health Organization. *Cardiovascular Diseases 2020. \[Online]* (Accessed 10 March 2022); <https://www.who.int/health-topics/cardiovascular-diseases#tab=tab_1>
-2. Ghwanmeh, S., Mohammad, A. & Al-Ibrahim, A. Innovative artificial neural networks-based decision support system for heart diseases diagnosis. *J. Intell. Learn. Syst. Appl.* 5(3), 176–183 (2013).
-
-   [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Innovative%20artificial%20neural%20networks-based%20decision%20support%20system%20for%20heart%20diseases%20diagnosis&journal=J.%20Intell.%20Learn.%20Syst.%20Appl.&volume=5&issue=3&pages=176-183&publication_year=2013&author=Ghwanmeh%2CS&author=Mohammad%2CA&author=Al-Ibrahim%2CA) 
-3. Staffini, A. *et al.* Heart rate modeling and prediction using autoregressive models and deep learning. *Sensors* 22(1), 1–13 (2022).
-
-   [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Heart%20rate%20modeling%20and%20prediction%20using%20autoregressive%20models%20and%20deep%20learning&journal=Sensors&volume=22&issue=1&pages=1-13&publication_year=2022&author=Staffini%2CA) 
-4. Anshori, M. & Haris, M. S. Predicting heart disease using logistic regression. *Knowl. Eng. Data Sci.* 5(2), 188–196 (2023).
-
-   [Article](https://doi.org/10.17977%2Fum018v5i22022p188-196) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Predicting%20heart%20disease%20using%20logistic%20regression&journal=Knowl.%20Eng.%20Data%20Sci.&doi=10.17977%2Fum018v5i22022p188-196&volume=5&issue=2&pages=188-196&publication_year=2023&author=Anshori%2CM&author=Haris%2CMS) 
-5. Shah, D., Patel, S. & Bharti, S. K. Heart disease prediction using machine learning techniques. *SN Comput. Sci.* 1, 1–6 (2020).
-
-   [Article](https://link.springer.com/doi/10.1007/s42979-020-00365-y) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Heart%20disease%20prediction%20using%20machine%20learning%20techniques&journal=SN%20Comput.%20Sci.&doi=10.1007%2Fs42979-020-00365-y&volume=1&pages=1-6&publication_year=2020&author=Shah%2CD&author=Patel%2CS&author=Bharti%2CSK) 
-6. Wang, Y., Pan, Z. & Dong, J. A new two-layer nearest neighbor selection method for kNN classifier. *Knowl.-Based Syst.* 235, 107604 (2022).
-
-   [Article](https://doi.org/10.1016%2Fj.knosys.2021.107604) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20new%20two-layer%20nearest%20neighbor%20selection%20method%20for%20kNN%20classifier&journal=Knowl.-Based%20Syst.&doi=10.1016%2Fj.knosys.2021.107604&volume=235&publication_year=2022&author=Wang%2CY&author=Pan%2CZ&author=Dong%2CJ) 
-7. Verma, E. P. & Singh, E. P. Human heart disease prediction system using enhanced decision tree algorithm in data mining. *Int. J. Innov. Sci. Eng. Technol.* 8(6), 1–7 (2021).
-
-   [CAS](https://link.springer.com/articles/cas-redirect/1:CAS:528:DC%2BB3MXisVWmsbzO) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Human%20heart%20disease%20prediction%20system%20using%20enhanced%20decision%20tree%20algorithm%20in%20data%20mining&journal=Int.%20J.%20Innov.%20Sci.%20Eng.%20Technol.&volume=8&issue=6&pages=1-7&publication_year=2021&author=Verma%2CEP&author=Singh%2CEP) 
-8. Bharti, R. *et al.* Prediction of heart disease using a combination of machine learning and deep learning. *Comput. Intell. Neurosci.* 2021, 11 (2021).
-
-   [Article](https://doi.org/10.1155%2F2021%2F8387680) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Prediction%20of%20heart%20disease%20using%20a%20combination%20of%20machine%20learning%20and%20deep%20learning&journal=Comput.%20Intell.%20Neurosci.&doi=10.1155%2F2021%2F8387680&volume=2021&publication_year=2021&author=Bharti%2CR&author=Khamparia%2CA&author=Shabaz%2CM&author=Dhiman%2CG&author=Pande%2CS&author=Singh%2CP) 
-9. Amin, S. M., Kia, Y. & Dewi, K. Identification of significant features and data mining techniques in predicting heart disease. *Telematics Inform.* 36, 82–93 (2019).
-
-   [Article](https://doi.org/10.1016%2Fj.tele.2018.11.007) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Identification%20of%20significant%20features%20and%20data%20mining%20techniques%20in%20predicting%20heart%20disease&journal=Telematics%20Inform.&doi=10.1016%2Fj.tele.2018.11.007&volume=36&pages=82-93&publication_year=2019&author=Amin%2CSM&author=Kia%2CY&author=Dewi%2CK) 
-10. Haq, A. U., Li, J., Memon, M. H., Memon, M. H., Khan, J. & Marium, S. M. Heart disease prediction system using model of machine learning and sequential backward selection algorithm for features selection, in *IEEE 5th International Conference for Convergence in Technology (I2CT)* (2019).
-11. Hicks, S. A. *et al.* On evaluation metrics for medical applications of artificial intelligence. *Sci. Rep.* 12, 5979 (2022).
-
-    [Article](https://doi.org/10.1038%2Fs41598-022-09954-8) [ADS](http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&bibcode=2022NatSR..12.5979H) [CAS](https://link.springer.com/articles/cas-redirect/1:CAS:528:DC%2BB38XpvVWnt7o%3D) [PubMed](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=35395867) [PubMed Central](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC8993826) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=On%20evaluation%20metrics%20for%20medical%20applications%20of%20artificial%20intelligence&journal=Sci.%20Rep.&doi=10.1038%2Fs41598-022-09954-8&volume=12&publication_year=2022&author=Hicks%2CSA&author=Str%C3%BCmke%2CI&author=Thambawita%2CV&author=Hammou%2CM&author=Riegler%2CMA&author=Halvorsen%2CP&author=Parasa%2CS) 
-12. Benítez-Caballero, M. J., Medina, J., Ramírez-Poussa, E. & Ślȩzak, D. Bireducts with tolerance relations. *Inf. Sci.* 435, 26–39 (2018).
-
-    [Article](https://doi.org/10.1016%2Fj.ins.2017.12.037) [MathSciNet](http://www.ams.org/mathscinet-getitem?mr=3759667) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Bireducts%20with%20tolerance%20relations&journal=Inf.%20Sci.&doi=10.1016%2Fj.ins.2017.12.037&volume=435&pages=26-39&publication_year=2018&author=Ben%C3%ADtez-Caballero%2CMJ&author=Medina%2CJ&author=Ram%C3%ADrez-Poussa%2CE&author=%C5%9Al%C8%A9zak%2CD) 
-13. Zeniarja, J., Ukhifahdhina, A. & Salam, A. Diagnosis of heart disease using K-nearest neighbor method based on forward selection. *J. Appl. Intell. Syst.* 4(2), 39–47 (2019).
-
-    [Article](https://doi.org/10.33633%2Fjais.v4i2.2749) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Diagnosis%20of%20heart%20disease%20using%20K-nearest%20neighbor%20method%20based%20on%20forward%20selection&journal=J.%20Appl.%20Intell.%20Syst.&doi=10.33633%2Fjais.v4i2.2749&volume=4&issue=2&pages=39-47&publication_year=2019&author=Zeniarja%2CJ&author=Ukhifahdhina%2CA&author=Salam%2CA) 
-14. Farahat, A. K., Ghodsi, A. & Kamel, M. S. Efficient greedy feature selection for unsupervised learning. *Knowl. Inf. Syst.* 35(2), 285–310 (2013).
-
-    [Article](https://link.springer.com/doi/10.1007/s10115-012-0538-1) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Efficient%20greedy%20feature%20selection%20for%20unsupervised%20learning&journal=Knowl.%20Inf.%20Syst.&doi=10.1007%2Fs10115-012-0538-1&volume=35&issue=2&pages=285-310&publication_year=2013&author=Farahat%2CAK&author=Ghodsi%2CA&author=Kamel%2CMS) 
-15. Wang, S., Chen, J., Guo, W. & Liu, G. Structured learning for unsupervised feature selection with high-order matrix factorization. *Expert Syst. Appl.* 140, 112878 (2020).
-
-    [Article](https://doi.org/10.1016%2Fj.eswa.2019.112878) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Structured%20learning%20for%20unsupervised%20feature%20selection%20with%20high-order%20matrix%20factorization&journal=Expert%20Syst.%20Appl.&doi=10.1016%2Fj.eswa.2019.112878&volume=140&publication_year=2020&author=Wang%2CS&author=Chen%2CJ&author=Guo%2CW&author=Liu%2CG) 
-16. Pathan, M. S., Nag, A., Pathan, M. M. & Dev, S. Analyzing the impact of feature selection on the accuracy of heart disease. *Healthc. Anal.* 1, 100060 (2022).
-
-    [Article](https://doi.org/10.1016%2Fj.health.2022.100060) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Analyzing%20the%20impact%20of%20feature%20selection%20on%20the%20accuracy%20of%20heart%20disease&journal=Healthc.%20Anal.&doi=10.1016%2Fj.health.2022.100060&volume=1&publication_year=2022&author=Pathan%2CMS&author=Nag%2CA&author=Pathan%2CMM&author=Dev%2CS) 
-17. Bommert, A., Sun, X., Bischl, B., Rahnenführer, J. & Lang, M. Benchmark for filter methods for feature selection in high-dimensional classification data. *Comput. Stat. Data Anal.* 143, 106839 (2020).
-
-    [Article](https://doi.org/10.1016%2Fj.csda.2019.106839) [MathSciNet](http://www.ams.org/mathscinet-getitem?mr=4013209) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Benchmark%20for%20filter%20methods%20for%20feature%20selection%20in%20high-dimensional%20classification%20data&journal=Comput.%20Stat.%20Data%20Anal.&doi=10.1016%2Fj.csda.2019.106839&volume=143&publication_year=2020&author=Bommert%2CA&author=Sun%2CX&author=Bischl%2CB&author=Rahnenf%C3%BChrer%2CJ&author=Lang%2CM) 
-18. Ghosh, P., Azam, S., Karim, A., Jonkman, M., & Hasan, M. Z. Use of efficient machine learning techniques in the identification of patients with heart diseases, in *5th International Conference on Information System and Data Mining (ICISDM 2021)* (2021).
-19. Narsimhulu, K., Ramchander, N. S., & Swathi, A. An AI enabled framework with feature selection for efficient heart disease prediction, in *2022 5th International Conference on Contemporary Computing and Informatics* (2022).
-20. Ditzler, G., Polikar, R. & Rosen, G. A sequential learning approach for scaling up filter-based feature subset selection. *IEEE Trans. Neural Netw. Learn. Syst.* 29(6), 2530–2544 (2017).
-
-    [Article](https://doi.org/10.1109%2FTNNLS.2017.2697407) [MathSciNet](http://www.ams.org/mathscinet-getitem?mr=3811435) [PubMed](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=28504951) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20sequential%20learning%20approach%20for%20scaling%20up%20filter-based%20feature%20subset%20selection&journal=IEEE%20Trans.%20Neural%20Netw.%20Learn.%20Syst.&doi=10.1109%2FTNNLS.2017.2697407&volume=29&issue=6&pages=2530-2544&publication_year=2017&author=Ditzler%2CG&author=Polikar%2CR&author=Rosen%2CG) 
-21. Taha, A., Hadi, A. S. & Bernard Cosgrave, S. M. A multiple association-based unsupervised feature selection algorithm for mixed data sets. *Expert Syst. Appl.* 212, 118718 (2023).
-
-    [Article](https://doi.org/10.1016%2Fj.eswa.2022.118718) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20multiple%20association-based%20unsupervised%20feature%20selection%20algorithm%20for%20mixed%20data%20sets&journal=Expert%20Syst.%20Appl.&doi=10.1016%2Fj.eswa.2022.118718&volume=212&publication_year=2023&author=Taha%2CA&author=Hadi%2CAS&author=Bernard%20Cosgrave%2CSM) 
-22. Mostafa, S. A. *et al.* Examining multiple feature evaluation and classification methods for improving the diagnosis of Parkinson’s disease. *Cogn. Syst. Res.* 54, 90–99 (2019).
-
-    [Article](https://doi.org/10.1016%2Fj.cogsys.2018.12.004) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Examining%20multiple%20feature%20evaluation%20and%20classification%20methods%20for%20improving%20the%20diagnosis%20of%20Parkinson%E2%80%99s%20disease&journal=Cogn.%20Syst.%20Res.&doi=10.1016%2Fj.cogsys.2018.12.004&volume=54&pages=90-99&publication_year=2019&author=Mostafa%2CSA&author=Mustapha%2CA&author=Mohammed%2CMA&author=Hamed%2CRI&author=Arunkumar%2CN&author=Ghani%2CMKA&author=Jaber%2CMM&author=Khaleefah%2CSH) 
-23. Zhang, D. *et al.* Heart disease prediction based on the embedded feature selection method and deep neural network. *Hindawi* 2021, 1–9 (2021).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Heart%20disease%20prediction%20based%20on%20the%20embedded%20feature%20selection%20method%20and%20deep%20neural%20network&journal=Hindawi&volume=2021&pages=1-9&publication_year=2021&author=Zhang%2CD&author=Chen%2CY&author=Chen%2CY&author=Ye%2CS&author=Cai%2CW&author=Jiang%2CJ&author=Xu%2CY&author=Zheng%2CG&author=Chen%2CM) 
-24. Hutamaputra, W., Mawarni, M., Krisnabayu, R. Y., & Mahmudy, W. F. Detection of coronary heart disease using modified K-NN method with recursive feature elimination, in *6th International Conference on Sustainable Information Engineering* (2021).
-25. Ang, J. C., Mirzal, A., Haron, H. & Hamed, H. N. A. Supervised, unsupervised, and semi-supervised feature selection: A review on gene selection. *IEEE/ACM Trans. Comput. Biol. Bioinf.* 13(5), 971–989 (2015).
-
-    [Article](https://doi.org/10.1109%2FTCBB.2015.2478454) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Supervised%2C%20unsupervised%2C%20and%20semi-supervised%20feature%20selection%3A%20A%20review%20on%20gene%20selection&journal=IEEE%2FACM%20Trans.%20Comput.%20Biol.%20Bioinf.&doi=10.1109%2FTCBB.2015.2478454&volume=13&issue=5&pages=971-989&publication_year=2015&author=Ang%2CJC&author=Mirzal%2CA&author=Haron%2CH&author=Hamed%2CHNA) 
-26. Khaire, U. M. & Dhanalakshmi, R. Stability of feature selection algorithm: A review. *J King Saud Univ. Comput. Inf. Sci.* 34(4), 1060–1073 (2022).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Stability%20of%20feature%20selection%20algorithm%3A%20A%20review&journal=J%20King%20Saud%20Univ.%20Comput.%20Inf.%20Sci.&volume=34&issue=4&pages=1060-1073&publication_year=2022&author=Khaire%2CUM&author=Dhanalakshmi%2CR) 
-27. Firdaus, F. F., Nugroho, H. A. & Soesanti, I. A review of feature selection and classification approaches for heart disease prediction. *Int. J. Inf. Technol. Electric. Eng.* 4(3), 75–82 (2020).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20review%20of%20feature%20selection%20and%20classification%20approaches%20for%20heart%20disease%20prediction&journal=Int.%20J.%20Inf.%20Technol.%20Electric.%20Eng.&volume=4&issue=3&pages=75-82&publication_year=2020&author=Firdaus%2CFF&author=Nugroho%2CHA&author=Soesanti%2CI) 
-28. Ghosh, P. *et al.* Efficient prediction of cardiovascular disease using machine learning algorithms with relief and lasso feature selection techniques. *IEEE Access* 9, 19304–19326 (2021).
-
-    [Article](https://doi.org/10.1109%2FACCESS.2021.3053759) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Efficient%20prediction%20of%20cardiovascular%20disease%20using%20machine%20learning%20algorithms%20with%20relief%20and%20lasso%20feature%20selection%20techniques&journal=IEEE%20Access&doi=10.1109%2FACCESS.2021.3053759&volume=9&pages=19304-19326&publication_year=2021&author=Ghosh%2CP&author=Azam%2CS&author=Jonkman%2CM&author=Karim%2CA&author=Shamrat%2CFMM&author=Ignatious%2CE&author=Shultana%2CS&author=Beeravolu%2CAR&author=Boer%2CF) 
-29. Pavya, K. & Srinivasan, B. Feature selection techniques in data mining: A study. *Int. J. Sci. Dev. Res.* 2(6), 594–598 (2017).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Feature%20selection%20techniques%20in%20data%20mining%3A%20A%20study&journal=Int.%20J.%20Sci.%20Dev.%20Res.&volume=2&issue=6&pages=594-598&publication_year=2017&author=Pavya%2CK&author=Srinivasan%2CB) 
-30. Acharjya, D. P. A hybrid scheme for heart disease diagnosis using rough set and cuckoo search technique. *J. Med. Syst.* 44(1), 1–16 (2020).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20hybrid%20scheme%20for%20heart%20disease%20diagnosis%20using%20rough%20set%20and%20cuckoo%20search%20technique&journal=J.%20Med.%20Syst.&volume=44&issue=1&pages=1-16&publication_year=2020&author=Acharjya%2CDP) 
-31. Mandal, M., Singh, P. K., Ijaz, M. F., Shafi, J. & Sarkar, R. A tri-stage wrapper-filter feature selection framework for disease classification. *Sensors* 21, 5571 (2021).
-
-    [Article](https://doi.org/10.3390%2Fs21165571) [ADS](http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&bibcode=2021Senso..21.5571M) [PubMed](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=34451013) [PubMed Central](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC8402295) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20tri-stage%20wrapper-filter%20feature%20selection%20framework%20for%20disease%20classification&journal=Sensors&doi=10.3390%2Fs21165571&volume=21&publication_year=2021&author=Mandal%2CM&author=Singh%2CPK&author=Ijaz%2CMF&author=Shafi%2CJ&author=Sarkar%2CR) 
-32. Arroyo, J. C. T. & Delima, A. J. P. An optimized neural network using genetic algorithm for cardiovascular disease prediction. *J. Adv. Inf. Technol.* 13(1), 95–99 (2022).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=An%20optimized%20neural%20network%20using%20genetic%20algorithm%20for%20cardiovascular%20disease%20prediction&journal=J.%20Adv.%20Inf.%20Technol.&volume=13&issue=1&pages=95-99&publication_year=2022&author=Arroyo%2CJCT&author=Delima%2CAJP) 
-33. Khourdifi, Y. & Bahaj, M. Heart disease prediction and classification using machine learning algorithms optimized by particle swarm optimization and ant colony optimization. *Int. J. Intell. Eng. Syst.* 12(1), 242–252 (2019).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Heart%20disease%20prediction%20and%20classification%20using%20machine%20learning%20algorithms%20optimized%20by%20particle%20swarm%20optimization%20and%20ant%20colony%20optimization&journal=Int.%20J.%20Intell.%20Eng.%20Syst.&volume=12&issue=1&pages=242-252&publication_year=2019&author=Khourdifi%2CY&author=Bahaj%2CM) 
-34. Prayogo, R. D. & Karimah, S. A. Hybrid feature selection with K-nearest neighbors for optimal heart failure detection, in *2022 12th International Conference on System Engineering and Technology (ICSET), Bandung, Indonesia* (2022).
-35. Rostami, M., Berahmand, K., Nasiri, E. & Forouzande, S. Review of swarm intelligence-based feature selection methods. *Eng. Appl. Artif. Intell.* 100, 104210 (2021).
-
-    [Article](https://doi.org/10.1016%2Fj.engappai.2021.104210) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Review%20of%20swarm%20intelligence-based%20feature%20selection%20methods&journal=Eng.%20Appl.%20Artif.%20Intell.&doi=10.1016%2Fj.engappai.2021.104210&volume=100&publication_year=2021&author=Rostami%2CM&author=Berahmand%2CK&author=Nasiri%2CE&author=Forouzande%2CS) 
-36. Usman, A. M., Yusof, U. K. & Naim, S. Cuckoo inspired algorithms for feature selection in heart. *Int. J. Adv. Intell. Inf.* 4(2), 95–106 (2018).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Cuckoo%20inspired%20algorithms%20for%20feature%20selection%20in%20heart&journal=Int.%20J.%20Adv.%20Intell.%20Inf.&volume=4&issue=2&pages=95-106&publication_year=2018&author=Usman%2CAM&author=Yusof%2CUK&author=Naim%2CS) 
-37. Al-Tashi, Q., Rais, H., & Jadid, S. Feature selection method based on grey wolf optimization for coronary artery disease classification, in *International Conference of Reliable Information and Communication Technology* (2018).
-38. Bakrawy, L. M. E. Grey Wolf optimization And Naive Bayes classifier incorporation for heart disease diagnosis. *Aust. J. Basic Appl. Sci.* 11(7), 64–70 (2017).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Grey%20Wolf%20optimization%20And%20Naive%20Bayes%20classifier%20incorporation%20for%20heart%20disease%20diagnosis&journal=Aust.%20J.%20Basic%20Appl.%20Sci.&volume=11&issue=7&pages=64-70&publication_year=2017&author=Bakrawy%2CLME) 
-39. Chakraborty, C., Kishor, A. & Rodrigues, J. J. Novel enhanced-Grey Wolf optimization hybrid machine learning technique for biomedical data computation. *Comput. Electric. Eng.* 99, 107778 (2022).
-
-    [Article](https://doi.org/10.1016%2Fj.compeleceng.2022.107778) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Novel%20enhanced-Grey%20Wolf%20optimization%20hybrid%20machine%20learning%20technique%20for%20biomedical%20data%20computation&journal=Comput.%20Electric.%20Eng.&doi=10.1016%2Fj.compeleceng.2022.107778&volume=99&publication_year=2022&author=Chakraborty%2CC&author=Kishor%2CA&author=Rodrigues%2CJJ) 
-40. David, V. K. Feature selection using Whale swarm algorithm and a comparison of classifiers for prediction of cardiovascular diseases. *Int. J. Res. Anal. Rev. (IJRAR)* 6(2), 123–130 (2019).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Feature%20selection%20using%20Whale%20swarm%20algorithm%20and%20a%20comparison%20of%20classifiers%20for%20prediction%20of%20cardiovascular%20diseases&journal=Int.%20J.%20Res.%20Anal.%20Rev.%20%28IJRAR%29&volume=6&issue=2&pages=123-130&publication_year=2019&author=David%2CVK) 
-41. Shahid, A. H. & Singh, M. A novel approach for coronary artery disease diagnosis using hybrid particle Swarm optimization based emotional neural network. *Biocybern. Biomed. Eng.* 40(4), 1568–1585 (2020).
-
-    [Article](https://doi.org/10.1016%2Fj.bbe.2020.09.005) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20novel%20approach%20for%20coronary%20artery%20disease%20diagnosis%20using%20hybrid%20particle%20Swarm%20optimization%20based%20emotional%20neural%20network&journal=Biocybern.%20Biomed.%20Eng.&doi=10.1016%2Fj.bbe.2020.09.005&volume=40&issue=4&pages=1568-1585&publication_year=2020&author=Shahid%2CAH&author=Singh%2CM) 
-42. Asadi, S., Roshan, S. & Kattan, M. W. Random forest swarm optimization-based for heart diseases diagnosis. *J. Biomed. Inform.* 115, 103690 (2021).
-
-    [Article](https://doi.org/10.1016%2Fj.jbi.2021.103690) [PubMed](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=33540075) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Random%20forest%20swarm%20optimization-based%20for%20heart%20diseases%20diagnosis&journal=J.%20Biomed.%20Inform.&doi=10.1016%2Fj.jbi.2021.103690&volume=115&publication_year=2021&author=Asadi%2CS&author=Roshan%2CS&author=Kattan%2CMW) 
-43. Wankhede, J., Kumar, M. & Sambandam, P. Efficient heart disease prediction-based on optimal feature selection using DFCSS and classification by improved Elman-SFO. *IET Syst. Biol.* 14(6), 380–390 (2020).
-
-    [Article](https://doi.org/10.1049%2Fiet-syb.2020.0041) [PubMed](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=33399101) [PubMed Central](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC8687167) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Efficient%20heart%20disease%20prediction-based%20on%20optimal%20feature%20selection%20using%20DFCSS%20and%20classification%20by%20improved%20Elman-SFO&journal=IET%20Syst.%20Biol.&doi=10.1049%2Fiet-syb.2020.0041&volume=14&issue=6&pages=380-390&publication_year=2020&author=Wankhede%2CJ&author=Kumar%2CM&author=Sambandam%2CP) 
-44. Sureja, N., Chawda, B. V. & Vasant, A. A novel salp swarm clustering algorithm for prediction of the heart diseases. *Indones. J. Electric. Eng. Comput. Sci.* 25(1), 265–272 (2022).
-
-    [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20novel%20salp%20swarm%20clustering%20algorithm%20for%20prediction%20of%20the%20heart%20diseases&journal=Indones.%20J.%20Electric.%20Eng.%20Comput.%20Sci.&volume=25&issue=1&pages=265-272&publication_year=2022&author=Sureja%2CN&author=Chawda%2CBV&author=Vasant%2CA) 
-45. Lee, C.-Y. & Zhuo, G.-L. A hybrid Whale optimization algorithm for global optimization. *Mathematics* 9, 1477 (2021).
-
-    [Article](https://doi.org/10.3390%2Fmath9131477) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20hybrid%20Whale%20optimization%20algorithm%20for%20global%20optimization&journal=Mathematics&doi=10.3390%2Fmath9131477&volume=9&publication_year=2021&author=Lee%2CC-Y&author=Zhuo%2CG-L) 
-46. Mirjalili, S. & Lewis, A. The Whale optimization algorithm. *Adv. Eng. Softw.* 95, 51–67 (2016).
-
-    [Article](https://doi.org/10.1016%2Fj.advengsoft.2016.01.008) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=The%20Whale%20optimization%20algorithm&journal=Adv.%20Eng.%20Softw.&doi=10.1016%2Fj.advengsoft.2016.01.008&volume=95&pages=51-67&publication_year=2016&author=Mirjalili%2CS&author=Lewis%2CA) 
-47. Pham, Q.-V., Mirjalili, S., Kumar, N., Alazab, M. & Hwang, W.-J. Whale optimization algorithm with applications to resource allocation in wireless networks. *IEEE Trans. Veh. Technol.* 69(4), 4285–4297 (2020).
-
-    [Article](https://doi.org/10.1109%2FTVT.2020.2973294) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Whale%20optimization%20algorithm%20with%20applications%20to%20resource%20allocation%20in%20wireless%20networks&journal=IEEE%20Trans.%20Veh.%20Technol.&doi=10.1109%2FTVT.2020.2973294&volume=69&issue=4&pages=4285-4297&publication_year=2020&author=Pham%2CQ-V&author=Mirjalili%2CS&author=Kumar%2CN&author=Alazab%2CM&author=Hwang%2CW-J) 
-48. Alameer, Z., Elaziz, M. A., Ewees, A. A., Ye, H. & Jianhua, Z. Forecasting gold price fluctuations using improved multilayer perceptron neural network and whale optimization algorithm. *Resour. Policy* 61, 250–260 (2019).
-
-    [Article](https://doi.org/10.1016%2Fj.resourpol.2019.02.014) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=Forecasting%20gold%20price%20fluctuations%20using%20improved%20multilayer%20perceptron%20neural%20network%20and%20whale%20optimization%20algorithm&journal=Resour.%20Policy&doi=10.1016%2Fj.resourpol.2019.02.014&volume=61&pages=250-260&publication_year=2019&author=Alameer%2CZ&author=Elaziz%2CMA&author=Ewees%2CAA&author=Ye%2CH&author=Jianhua%2CZ) 
-49. Ay, Ş, Ekinci, E. & Garip, Z. A comparative analysis of meta-heuristic optimization algorithms for feature selection on ML-based classification of heart-related diseases. *J. Supercomput.* 79, 11797–11826 (2023).
-
-    [Article](https://link.springer.com/doi/10.1007/s11227-023-05132-3) [PubMed](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=37304052) [PubMed Central](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC9983547) [Google Scholar](http://scholar.google.com/scholar_lookup?&title=A%20comparative%20analysis%20of%20meta-heuristic%20optimization%20algorithms%20for%20feature%20selection%20on%20ML-based%20classification%20of%20heart-related%20diseases&journal=J.%20Supercomput.&doi=10.1007%2Fs11227-023-05132-3&volume=79&pages=11797-11826&publication_year=2023&author=Ay%2C%C5%9E&author=Ekinci%2CE&author=Garip%2CZ) 
-50. Mezher, M. A. Genetic folding (GF) algorithm with minimal kernel operators to predict stroke patients. *Appl. Artif. Intell.* 1, 2022 (2022).

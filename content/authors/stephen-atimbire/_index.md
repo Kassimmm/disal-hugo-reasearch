@@ -18,9 +18,7 @@ social:
     label: LinkedIn
 superuser: false
 user_groups:
-  - Grad Students
-  - Researchers
-  - Visitors
+  - Reseachers
 ---
 
 Software Engineer with a proven track record of over a decade in leading projects and providing technical support within complex, high-risk projects for top multinational I.T. consulting service providers and local banks. I am excited about Artificial Intelligence applications in health and creating innovation in education through technology. I have excellent communication, negotiation and human relations due to a blend of computing and psychology. Over the last decade, I have utilized my experience in the health, energy and banking industries.

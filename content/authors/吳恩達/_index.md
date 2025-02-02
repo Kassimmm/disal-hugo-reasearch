@@ -14,8 +14,11 @@ bio: Daniel (Kwame) Amissah is an experienced IT Support Specialist with over 3
   professional, he also conducts research in machine learning. Daniel combines
   technical proficiency with a passion for innovation and problem-solving.
 interests:
-  - Top skills Top skills Machine Learning • Image Processing • IT Operations •
-    IT Support • Research
+  - Top skills Machine Learning 
+  - Image Processing 
+  - IT Operations 
+  - IT Support
+  - Research
 social:
   - icon: envelope
     icon_pack: fas
@@ -42,7 +45,6 @@ education:
 email: ""
 user_groups:
   - Researchers
-  - Visitors
 last_name: Amissah
 first_name: Daniel
 ---

@@ -45,12 +45,13 @@ header:
 
 footer:
   copyright:
-    notice: '© 2024 Data Intelligence and Swarm Analytics Laboratory. All rights reserved.'
+    notice: '© 2024 Data Intelligence and Swarm Analytics Laboratory. All rights reserved'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
+
 
 # Localization
 

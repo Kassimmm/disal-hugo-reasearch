@@ -8,8 +8,22 @@ bio: Kelvin Fiifi Nketia is a Research Assistant and Software Engineer at DISAL,
   technical expertise with a passion for creating innovative solutions that
   enhance accessibility and communication.
 interests:
-  - Software Development • JavaScript • Python (Programming Language) • Node.js
-    • React
+  - Software Development
+  - JavaScript
+  - Python (Programming Language)
+  - Node.js
+  - React
+education:
+  courses:
+    - course: PhD in Artificial Intelligence
+      institution: Stanford University
+      year: 2012
+    - course: MEng in Artificial Intelligence
+      institution: Massachusetts Institute of Technology
+      year: 2009
+    - course: BSc in Artificial Intelligence
+      institution: Massachusetts Institute of Technology
+      year: 2008
 social:
   - display:
       header: false

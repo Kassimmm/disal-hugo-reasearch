@@ -56,14 +56,16 @@ sections:
       columns: '1'
       background:
         image: 
-          # filename: contact.jpg
+          filename: contact.jpg
+          style: "width: 80%; margin: 20px 20px;"
           filters:
             brightness: 1
           parallax: false
           position: center
           size: cover
           text_color_light: true
+      
       spacing:
-        padding: ['20px', '0', '20px', '0']
+        margin: ['20px', '20px', '20px', '20px']
       css_class: fullscreen
 ---

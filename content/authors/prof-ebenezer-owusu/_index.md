@@ -1,34 +1,50 @@
 ---
-title: Prof Ebenezer Owusu
-role: Associate Professor of AI | HOD
-avatar_filename: avatar.jpeg
-bio: Prof Ebenezer Owusu is an Associate Professor of Artificial Intelligence at
-  the University of Ghana, where they also serve as the Head of the Department
-  of Computer Science. With over eight years of academic and professional
-  experience, Prof Ebenezer Owusu specializes in advancing research and
-  education in artificial intelligence, IT, and computer science, making a
-  significant impact in both academia and industry.
+title: Isaac Yirenkyi
+role: Software Engineer | Researcher
+avatar_filename: avatar-2-.jpg
+bio: I am a highly motivated individual driven by a passion for problem-solving.
+  With a keen eye for detail, I bring strong organizational and planning skills
+  to every project, ensuring efficient time management without compromising on
+  the quality of results. Over the years, I have worked in agile software
+  development, contributing to my ability to deliver solutions that meet
+  expectations. My commitment to excellence and continuous learning makes me an
+  invaluable asset to any team.
+interests:
+  - IT systems security
+  - Programming
+  - Data analysis
+  - Research
 social:
   - display:
       header: false
     link: ebeowusu@ug.edu.gh
-    icon_pack: fab
-    icon: mail
-    label: email
+    icon_pack: fas
+    icon: envelope
+    label: envelope
   - display:
       header: false
     link: https://www.linkedin.com/in/prof-ebenezer-owusu-883b3634/
     icon_pack: fab
     icon: linkedin
     label: linkedin
+education:
+  courses:
+    - course: PhD in Artificial Intelligence
+      institution: Stanford University
+      year: 2012
+    - course: MEng in Artificial Intelligence
+      institution: Massachusetts Institute of Technology
+      year: 2009
+    - course: BSc in Artificial Intelligence
+      institution: Massachusetts Institute of Technology
+      year: 2008
 email: ebeowusu@ug.edu.gh
 superuser: false
 user_groups:
-  - Researchers
+  - Grad Students
 ---
-Prof Ebenezer Owusu is an Associate Professor of Artificial Intelligence at the University of Ghana with over eight years of academic and professional experience in computer science. Currently serving as the Head of the Department of Computer Science, 
-Prof Ebenezer Owusu specializes in pattern recognition, image processing, and computer vision, leveraging expertise to drive advancements in these fields.
+Isaac Yirenkyi is a highly motivated professional with a deep passion for problem-solving and a commitment to excellence. Known for his keen eye for detail, Isaac consistently brings strong organizational and planning skills to every project, ensuring effective time management while maintaining the highest quality of results.
 
-Having held roles such as Senior Lecturer and Head of Department, 
-Prof Ebenezer Owusu has been instrumental in shaping academic programs, mentoring future tech leaders, and fostering cutting-edge research. With a strong commitment to innovation, 
-Prof Ebenezer Owusu continues to contribute to the growth of AI and computer science, both in academia and beyond
+With years of experience in agile software development, Isaac has honed his ability to deliver efficient, innovative solutions that meet and exceed expectations. His dedication to continuous learning and improvement has made him an invaluable asset to any team he is part of.
+
+Isaac is also a dedicated researcher at the **Data Intelligence and Swarm Analytics Laboratory (DISAL)**, where he contributes to cutting-edge advancements in data analysis, machine learning, and swarm-based systems. His collaborative approach and relentless drive for impactful research further showcase his ability to tackle complex challenges with precision and creativity.

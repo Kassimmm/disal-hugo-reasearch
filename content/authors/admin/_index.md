@@ -34,9 +34,15 @@ education:
     - course: PhD in Artificial Intelligence
       institution: University Of Ghana
       year: 2012
+    - course: PhD in Artificial Intelligence
+      institution: University Of Ghana
+      year: 2012
+    - course: PhD in Artificial Intelligence
+      institution: University Of Ghana
+      year: 2012
 superuser: true
 user_groups:
-  - Researchers
+  - Principal Investigators
 last_name: Bighetti
 highlight_name: false
 first_name: Nelson
