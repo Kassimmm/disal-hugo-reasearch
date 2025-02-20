@@ -3,8 +3,10 @@ title: Daniel Amissah
 role: PHD Student | Research Assistant
 avatar_filename: avatar.jpeg
 organizations:
-  - name: Stanford University
-    url: ""
+  - name: University of Ghana
+    url: https://www.ug.edu.gh/
+  - name: University of Cape Coast
+    url: https://ucc.edu.gh/
 superuser: false
 authors:
   - 吳恩達
@@ -14,11 +16,13 @@ bio: Daniel (Kwame) Amissah is an experienced IT Support Specialist with over 3
   professional, he also conducts research in machine learning. Daniel combines
   technical proficiency with a passion for innovation and problem-solving.
 interests:
-  - Top skills Machine Learning 
-  - Image Processing 
-  - IT Operations 
+  - Image Processing
+  - IT Operations
   - IT Support
-  - Research
+  - Research Experienced IT
+  - Support Specialist
+  - Office 365 & Linux Server Management
+  - Machine Learning Researcher
 social:
   - icon: envelope
     icon_pack: fas
@@ -33,15 +37,14 @@ social:
     label: LinkedIn
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
+    - course: Doctor of Philosophy - PhD, Computer Science
+      institution: "University of Ghana "
+      year: 2027
+    - course: Master of Science - MS, Computer Science
+      institution: "University of Ghana "
       year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: " Bachelor of Science - BS, Computer Science"
+      institution: University of Cape Coast
 email: ""
 user_groups:
   - Researchers

@@ -1,7 +1,7 @@
 ---
 title: Ziem Wellu
 role: "PHD Student | ML Researcher "
-avatar_filename: avatar.jpeg
+avatar_filename: avatar.jpg
 bio: A well-rounded AI expert, machine learning programmer, and data scientist,
   ready to tackle various challenges in the field of artificial intelligence and
   data science.
@@ -10,24 +10,21 @@ interests:
   - IT Projects
   - ATM Security
   - IT Services
-education:
-  courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
 social:
   - display:
       header: false
-    link: https://www.linkedin.com/in/ziem-wellu-608b04ba/
-    icon_pack: fab
-    icon: linkedin
-    label: LinkedIn
+    link: https://www.researchgate.net/profile/Patrick-Wellu
+    icon_pack: ai
+    icon: researchgate
+    label: researchgate
+organizations:
+  - name: "University of Ghana "
+    url: https://www.ug.edu.gh/
+education:
+  courses:
+    - course: Master of Science (Computer Science)
+      institution: University of Ghana
+      year: 2024
 superuser: false
 user_groups:
   - Researchers

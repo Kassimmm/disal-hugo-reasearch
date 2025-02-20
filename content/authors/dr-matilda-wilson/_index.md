@@ -7,6 +7,12 @@ bio: My expertise encompasses cloud architecture and AI research and
   and practical applications. I am adept at translating complex business
   requirements into robust, cloud-based AI solutions that are cost-effective and
   high-performing.
+interests:
+  - Software Development
+  - JavaScript
+  - Python (Programming Language)
+  - Node.js
+  - React
 social:
   - display:
       header: false
@@ -14,26 +20,20 @@ social:
     icon_pack: fab
     icon: linkedin
     label: linkedin
-superuser: false
-
-interests:
-  - Software Development
-  - JavaScript
-  - Python (Programming Language)
-  - Node.js
-  - React
+organizations:
+  - name: University of Ghana
+    url: https://www.ug.edu.gh/
+  - name: University of Mines and Technology
+    url: https://umat.edu.gh/
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
-      
+    - course: " Master's degree, Computer Science"
+      institution: University of Ghana
+      year: 2022
+    - course: Bachelor's degree, Mathematics
+      institution: "University of Mines and Technology, Tarkwa "
+      year: 2019
+superuser: false
 user_groups:
   - Grad Students
 ---

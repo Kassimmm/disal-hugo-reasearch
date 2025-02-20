@@ -13,25 +13,24 @@ interests:
   - Python (Programming Language)
   - Node.js
   - React
-education:
-  courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
 social:
   - display:
       header: false
     link: https://www.linkedin.com/in/fiifinketia/
     icon_pack: fab
     icon: linkedin
+organizations:
+  - name: University of Ghana
+    url: https://www.ug.edu.gh/
+education:
+  courses:
+    - course: Bachelor of Science - BSc, Computer Science
+      institution: University of Ghana
+      year: 2023
+    - course: Master of Science - MSc, Computer Science
+      institution: " University of Ghana "
+      year: 2025
 superuser: false
-
 user_groups:
   - Grad Students
   - Visitors

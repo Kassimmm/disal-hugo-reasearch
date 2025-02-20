@@ -10,6 +10,10 @@ bio: I am a self motivated person with high sense of responsibility, hard worker
   giving my best in return for the opportunity to prove myself to be a worthy
   asset to any organization. And am a fast learner who possess strong
   motivational drive to succeed in all aspects of life
+interests:
+  - Research
+  - Software Engineering
+  - Cloud Computing
 social:
   - display:
       header: false
@@ -17,6 +21,20 @@ social:
     icon_pack: fab
     icon: linkedin
     label: linkedin
+organizations:
+  - name: " University of Ghana "
+    url: https://www.ug.edu.gh/
+education:
+  courses:
+    - course: Master of Science - MS, Computer Science
+      institution: "University of Ghana "
+      year: 2024
+    - course: Bachelor of Science - BSc, Computer Science
+      institution: "University of Ghana "
+      year: 2022
+    - course: Professional Certification, Cloud Computing
+      institution: Azubi Africa
+      year: 2022
 superuser: false
 user_groups:
   - Researchers

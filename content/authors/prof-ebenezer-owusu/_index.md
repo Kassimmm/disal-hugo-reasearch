@@ -27,18 +27,15 @@ social:
     icon_pack: fab
     icon: linkedin
     label: linkedin
+organizations:
+  - name: "University of Ghana "
+    url: https://www.ug.edu.gh/
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
-email: ebeowusu@ug.edu.gh
+    - course: Masters in Computer Science
+      institution: University of Ghana
+      year: 2022
+email: ""
 superuser: false
 user_groups:
   - Grad Students

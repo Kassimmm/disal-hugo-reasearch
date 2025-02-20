@@ -1,15 +1,17 @@
 ---
-title: Dr. Justice Appati
-role: "Research Lead | Senior Lecture "
+title: Prof. Justice Appati
+role: Research Lead | Assoc. Professor
 avatar_filename: avatar.jpg
 bio: Dr. Justice Kwame Appati is a Research Lead at DISAL Laboratory and a
   Senior Lecturer at the University of Ghana. With a passion for innovation and
   academia, Dr. Justice Kwame Appati contributes to groundbreaking research and
   education.
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Academic Research
+  - Applied Mathematics
+  - Image Processing
+  - Machine Learning
+  - Computer Vision
 social:
   - icon: envelope
     icon_pack: fas
@@ -32,14 +34,14 @@ organizations:
 education:
   courses:
     - course: PhD in Artificial Intelligence
-      institution: University Of Ghana
+      institution: Kwame Nkrumah University of Science and Technology, Kumasi
+      year: ""
+    - course: Master's degree, Mathematics
+      institution: "Kwame Nkrumah University of Science and Technology, Kumasi "
       year: 2012
-    - course: PhD in Artificial Intelligence
-      institution: University Of Ghana
-      year: 2012
-    - course: PhD in Artificial Intelligence
-      institution: University Of Ghana
-      year: 2012
+    - course: " Bachelor's degree, Mathematics"
+      institution: Kwame Nkrumah University of Science and Technology, Kumasi
+      year: 2010
 superuser: true
 user_groups:
   - Principal Investigators

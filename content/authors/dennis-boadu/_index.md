@@ -1,6 +1,6 @@
 ---
 title: Dennis Boadu
-role: "Research Assistant "
+role: Research Assistant | Assistant Lecturer
 avatar_filename: avatar.jpeg
 bio: Dennis Boadu is a versatile lecturer, data scientist, and computer
   scientist with extensive experience in university teaching and research. He
@@ -13,25 +13,28 @@ interests:
   - Data Science
   - Machine Learning
   - Software Development
-  - IT Consulting 
+  - IT Consulting
   - Workshop Facilitation
-education:
-  courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
 social:
   - display:
       header: false
     link: https://www.linkedin.com/in/dennis-boadu-699430b1
     icon_pack: fab
     icon: linkedin
+organizations:
+  - name: University of Ghana
+    url: https://www.ug.edu.gh/
+  - url: https://gij.edu.gh/
+    name: "Ghana Institute of Journalism "
+education:
+  courses:
+    - course: "Ghana Institute of Journalism  Master of Arts - MA, Development
+        Communication "
+      institution: Ghana Institute of Journalism
+      year: 2020
+    - course: " Bachelor of Science - BSc, Computer Science"
+      institution: University of Ghana University of Ghana
+      year: 2012
 superuser: false
 user_groups:
   - Researchers
